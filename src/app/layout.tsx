@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { DM_Sans } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
+import Script from "next/script";
 
-const dmSans = DM_Sans({
+const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-dm-sans",
+  variable: "--font-hanken-grotesk",
 });
 
 export const metadata: Metadata = {
@@ -13,7 +14,8 @@ export const metadata: Metadata = {
     default: "Unity Way Company Limited",
     template: "%s | Unity Way Company Limited",
   },
-  description: "Compassionate domiciliary care delivered in the comfort of your home.",
+  description:
+    "Compassionate domiciliary care delivered in the comfort of your home.",
   applicationName: "Unity Way Company Limited",
   keywords: [
     "domiciliary care",
@@ -27,7 +29,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Unity Way Company Limited",
-    description: "Compassionate domiciliary care delivered in the comfort of your home.",
+    description:
+      "Compassionate domiciliary care delivered in the comfort of your home.",
     locale: "en_GB",
     images: [
       {
@@ -41,7 +44,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Unity Way Company Limited",
-    description: "Compassionate domiciliary care delivered in the comfort of your home.",
+    description:
+      "Compassionate domiciliary care delivered in the comfort of your home.",
     images: ["/seo-image.png"],
   },
 };
@@ -53,8 +57,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressContentEditableWarning suppressHydrationWarning>
-      <body className={`${dmSans.variable} font-sans antialiased`}>
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="08f587e9-c2c6-4380-8dfe-925ec4174e21"
+        ></script>
+      </head>
+      <body className={`${hankenGrotesk.variable} font-sans antialiased`}>
         {children}
+        <Script id="tawk-to" strategy="afterInteractive">
+          {`
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+              var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+              s1.async = true;
+              s1.src = "https://embed.tawk.to/69ce0bbbb2f8a31c44a283f6/1jl6drm17";
+              s1.charset = "UTF-8";
+              s1.setAttribute("crossorigin", "*");
+              s0.parentNode.insertBefore(s1, s0);
+            })();
+          `}
+        </Script>
       </body>
     </html>
   );
