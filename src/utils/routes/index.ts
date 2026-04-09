@@ -1,0 +1,15 @@
+export const homePage = "/";
+export const featurePage = "/about";
+export const howItWorksPage = "/services/domiciliary-care";
+export const faqPage = "/booking";
+export const pricingRoute = "/booking";
+export const apiPage = "/contact";
+export const helpCenterPage = "/contact";
+export const privacyPolyPage = "/contact";
+export const termOfUsePage = "/contact";
+export const suggestFeaturesPage = "/contact";
+export const facebookLink = "https://facebook.com";
+export const instagramLink = "https://instagram.com";
+export const twitterLink = "https://x.com";
+export const linkendInLink = "https://linkedin.com";
+export const registerRoute = "#";

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* =====================
+   Font Faces
+   ===================== */
+@font-face {
+  font-family: "TWKLausanne";
+  src: url("/fonts/TWKLausanne-350.woff") format("woff");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Font Families */
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "TWKLausanne", serif;
+
+  /* Primary colors */
+  --color-primary-100: #047af0;
+  --color-primary-200: #5aa8ff;
+  --color-primary-300: #f1f8ff;
+  --color-primary-400: #e6f0ff;
+  --color-primary-500: #bfd9ff;
+  --color-primary-600: #eef6ff;
+  --color-primary-700: #0e152b;
+  --color-primary-800: #0e152b;
+
+  /* Secondary colors */ /* Black */
+  --color-secondary-100: #000000;
+  --color-secondary-200: #545454;
+  --color-secondary-300: #919191;
+  --color-secondary-400: #828282;
+
+  /* Tertiary Colors */
+  --color-tertiary-100: #fafafa;
+  --color-tertiary-200: #ffffff80;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =====================
+   Utility Font Classes
+   ===================== */
+.font-dm-sans {
+  font-family: "DM Sans", sans-serif;
+}
+
+.font-twk {
+  font-family: "TWKLausanne", sans-serif;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: 1px;
+  scroll-behavior: smooth;
+  scrollbar-color: black;
+}
