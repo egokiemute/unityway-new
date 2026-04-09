@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import FeatureSection from "@/components/commons/FeatureSection";
 import Heading from "@/components/commons/Heading";
 import Hero from "@/components/commons/Hero";
-import Clients from "@/components/landingPage/Clients";
 import FaqSection from "@/components/landingPage/FaqSection";
 import Testimonials from "@/components/landingPage/Testimonials";
 import { clientTestimonials } from "@/utils/contents/Homepage.Content";
@@ -84,8 +83,6 @@ export default function Home() {
         imageAlt="Trusted domiciliary care"
         imagePosition="right"
       />
-
-      <Clients />
 
       <Testimonials
         badge="Testimonial"
