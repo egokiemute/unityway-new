@@ -63,7 +63,7 @@ export default function CareBookingForm() {
   };
 
   return (
-    <div className="bg-[#F1F8FF] min-h-[500px] mx-auto rounded-[19.02px] w-full max-w-[630px] flex flex-col gap-6 py-[40px] px-[35px]">
+    <div className="bg-[#F1F8FF] min-h-[500px] rounded-l-[19.02px] w-full flex flex-col gap-6 py-[40px] px-[35px]">
       {submitted && (
         <div className="rounded-2xl bg-white px-4 py-3 text-sm text-[#0E152B]">
           <p className="font-semibold">Booking request received</p>
@@ -109,51 +109,55 @@ export default function CareBookingForm() {
           isSearchable={false}
         />
 
-        <SelectField
-          name="timeOfDay"
-          label="Preferred Time of Day"
-          placeholder="Preferred Time of Day"
-          value={formData.timeOfDay}
-          onChange={(value) =>
-            setFormData((current) => ({ ...current, timeOfDay: value }))
-          }
-          options={timeOfDayOptions.map((option) => ({
-            value: option,
-            label: option,
-          }))}
-          isSearchable={false}
-        />
+        <div className="flex items-center gap-4">
+          <SelectField
+            name="timeOfDay"
+            label="Preferred Time of Day"
+            placeholder="Preferred Time of Day"
+            value={formData.timeOfDay}
+            onChange={(value) =>
+              setFormData((current) => ({ ...current, timeOfDay: value }))
+            }
+            options={timeOfDayOptions.map((option) => ({
+              value: option,
+              label: option,
+            }))}
+            isSearchable={false}
+          />
 
-        <SelectField
-          name="preferredTime"
-          label="Preferred Time"
-          placeholder="Preferred Time"
-          value={formData.preferredTime}
-          onChange={(value) =>
-            setFormData((current) => ({ ...current, preferredTime: value }))
-          }
-          options={preferredTimeOptions.map((option) => ({
-            value: option,
-            label: option,
-          }))}
-          isSearchable={false}
-        />
+          <SelectField
+            name="preferredTime"
+            label="Preferred Time"
+            placeholder="Preferred Time"
+            value={formData.preferredTime}
+            onChange={(value) =>
+              setFormData((current) => ({ ...current, preferredTime: value }))
+            }
+            options={preferredTimeOptions.map((option) => ({
+              value: option,
+              label: option,
+            }))}
+            isSearchable={false}
+          />
+        </div>
 
-        <InputField
-          name="preferredDate"
-          label="Preferred date"
-          type="date"
-          value={formData.preferredDate}
-          onChange={handleInputChange}
-        />
+        <div className="flex items-center gap-4">
+          <InputField
+            name="preferredDate"
+            label="Preferred date"
+            type="date"
+            value={formData.preferredDate}
+            onChange={handleInputChange}
+          />
 
-        <InputField
-          name="phone"
-          label="Phone"
-          placeholder="Phone"
-          value={formData.phone}
-          onChange={handleInputChange}
-        />
+          <InputField
+            name="phone"
+            label="Phone"
+            placeholder="Phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+          />
+        </div>
 
         <InputField
           name="address"

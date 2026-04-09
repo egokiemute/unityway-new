@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CareContactForm from "@/components/forms/CareContactForm";
+import ContactHero from "@/components/ContactHero";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section className="px-2 py-10 mx-auto">
+      <ContactHero />
       <section className="flex flex-col mt-12 px-3 md:px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center item-start my-[68px] h-full">
           <div className="flex flex-col items-start gap-8 md:gap-10">

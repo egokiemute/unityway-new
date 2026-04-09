@@ -35,8 +35,8 @@ export default function Page() {
   return (
     <section className="px-2 py-10 mx-auto">
       <section className="flex flex-col mt-12 px-3 md:px-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center item-start my-[68px] h-full">
-          <div className="flex flex-col items-start gap-8 md:gap-10">
+        <div className="flex flex-col gap-12 justify-center item-start my-[68px] h-full">
+          <div className="flex flex-col items-start gap-8 md:gap-10 px-4 md:px-17">
             <div className="font-twk text-black font-normal text-5xl md:text-6xl text-center md:text-left leading-[100%]">
               <h1>Book Care</h1>
             </div>
@@ -65,9 +65,19 @@ export default function Page() {
               ))}
             </ul>
           </div>
-
-          <div className="w-full">
-            <CareBookingForm />
+          <div className="w-full flex flex-col md:flex-row items-start justify-center">
+            <div className="w-[640px]">
+              <CareBookingForm />
+            </div>
+            <div className="overflow-hidden">
+              <Image
+                src="/images/services/compassion.jpg"
+                alt="Care support"
+                width={600}
+                height={400}
+                className="rounded-tr-xl rounded-r-xl  hidden md:block"
+              />
+            </div>
           </div>
         </div>
       </section>

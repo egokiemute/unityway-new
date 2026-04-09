@@ -17,12 +17,10 @@ const BookADemoSection = ({
   buttonHref = "/booking",
 }: BookADemoSectionProps) => {
   return (
-    <section className="px-2 py-16 mx-auto">
-      <div className="px-4 md:px-10 py-16 pt-38 bg-[#F1FCFE] container relative rounded-2xl grid md:grid-cols-2 gap-12 items-center overflow-hidden">
+    <section className="px-2 py-16 mx-auto flex items-center justify-center">
+      <div className="mx-autopx-4 md:px-10 py-16 pt-38 bg-[#F1FCFE] container relative rounded-2xl grid md:grid-cols-2 gap-12 items-center overflow-hidden">
         <div className="text-black space-y-6">
-          <h2 className="text-2xl font-twk font-bold leading-snug">
-            {title}
-          </h2>
+          <h2 className="text-2xl font-twk font-bold leading-snug">{title}</h2>
           <p className="text-[16.5px] text-black/90">{description}</p>
 
           <Button
@@ -38,7 +36,7 @@ const BookADemoSection = ({
 
         <div className="overflow-hidden">
           <Image
-            src="/images/dashboard1.png"
+            src="/images/after.jpg"
             alt="Care support"
             width={600}
             height={400}

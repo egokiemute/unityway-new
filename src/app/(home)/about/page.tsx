@@ -4,6 +4,7 @@ import BookADemoSection from "@/components/BookADemoSection";
 import TeamSection from "@/components/TeamSection";
 import FaqSection from "@/components/landingPage/FaqSection";
 import Testimonials from "@/components/landingPage/Testimonials";
+import FeatureSection from "@/components/commons/FeatureSection";
 
 const aboutTestimonials = [
   {
@@ -59,6 +60,20 @@ export default function Page() {
   return (
     <section className="pt-20 mx-auto">
       <AboutUsSection />
+
+      <FeatureSection
+        badgeText="About Us"
+        heading="Welcome to Unity Way Company Limited"
+        description="We specialise in domiciliary care that enables individuals to live safely and comfortably in their own homes. Our approach is built on dignity, respect, and personalised support-covering personal care, companionship, mobility assistance, and daily living support."
+        bullets={["50+ Clients supported", "Domiciliary Care"]}
+        cta={{
+          label: "Book Care",
+          href: "/booking",
+        }}
+        imageSrc="/images/img-about-one.jpg"
+        imageAlt="Domiciliary care support"
+        imagePosition="right"
+      />
       <Testimonials
         badge="Testimonial"
         title="What Our Clients Say"
