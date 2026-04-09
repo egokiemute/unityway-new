@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Unity Way Company Limited",
     description:
       "Compassionate domiciliary care delivered in the comfort of your home.",
-    images: ["/seo-image.png"],
+    images: ["/og-image.png"],
   },
 };
 
