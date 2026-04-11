@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import FeatureSection from "@/components/commons/FeatureSection";
-import Heading from "@/components/commons/Heading";
 import Hero from "@/components/commons/Hero";
 import FaqSection from "@/components/landingPage/FaqSection";
 import Testimonials from "@/components/landingPage/Testimonials";
 import { clientTestimonials } from "@/utils/contents/Homepage.Content";
+import OurProcess from "@/components/commons/OurProcess";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -27,10 +27,10 @@ export default function Home() {
         }}
       />
 
-      <Heading
+      {/* <Heading
         className="items-start text-3xl font-twk max-w-3xl pb-0"
         text="Care services designed to support daily living at home"
-      />
+      /> */}
 
       <FeatureSection
         badgeText="About Us"
@@ -44,6 +44,34 @@ export default function Home() {
         imageSrc="/images/img-about-one.jpg"
         imageAlt="Domiciliary care support"
         imagePosition="right"
+      />
+
+      <OurProcess
+        heading="Excellence in care, every step of the way"
+        subtext="Discover healthcare services built around quality treatment, experienced professionals, and patient well-being."
+        imageSrc="/images/services/compassion.jpg"
+        items={[
+          {
+            title: "General Consultation",
+            description:
+              "Personalised consultations for accurate diagnosis and everyday health guidance. designed to provide expert advice and support for your health concerns.",
+          },
+          {
+            title: "Diagnostics & Test",
+            description:
+              "Modern testing for precise and reliable results. Our diagnostic services are designed to provide accurate insights into your health, helping guide effective treatment plans.",
+          },
+          {
+            title: "Specialist Care",
+            description:
+              "Expert medical support across multiple specialties. Our specialist care services connect.",
+          },
+          {
+            title: "Preventive Care",
+            description:
+              "Health checkups designed for early detection and prevention. Our preventive care services focus on proactive health management, offering regular checkups.",
+          },
+        ]}
       />
 
       <FeatureSection
@@ -64,6 +92,22 @@ export default function Home() {
         imageAlt="Care services"
         imagePosition="left"
       />
+
+      {/* <WhyChooseUs
+        heading="Why Choose Us?"
+        subtext="Your health, our commitment - here’s what sets us apart"
+        title="Let’s know about our main goal"
+        description="We aim to offer clear and comprehensive information about our services, conditions treated, and treatment options. This ensures that patients can make informed decisions about their healthcare"
+        imageSrc="/images/services/special-care.jpg"
+        items={[
+          { text: "Providing Accessible Information" },
+          { text: "Building Trust" },
+          { text: "Enhancing Patient Engagement" },
+          { text: "Community Involvement" },
+          { text: "Promoting Health Education" },
+          { text: "Security and Privacy" },
+        ]}
+      /> */}
 
       <FeatureSection
         badgeText="Why Choose Us"

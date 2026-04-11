@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import React from "react";
 import BookADemoSection from "@/components/BookADemoSection";
-import Hero from "@/components/commons/Hero";
 import BlogGrid from "@/components/commons/BlogGrid";
 import FaqSection from "@/components/landingPage/FaqSection";
+import ServiceHero from "@/components/commons/ServiceHero";
 
 const servicesFaqs = [
   {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section className="px-3 sm:px-4 lg:px-5 py-10 mx-auto">
-      <Hero
+      <ServiceHero
         badgeText="Domiciliary Care"
         heading="Domiciliary Care Services"
         subtext="Our domiciliary care services support daily living, independence, dignity, and wellbeing at home."

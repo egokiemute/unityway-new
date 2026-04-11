@@ -1,20 +1,9 @@
 @import "tailwindcss";
 
-/* =====================
-   Font Faces
-   ===================== */
-@font-face {
-  font-family: "TWKLausanne";
-  src: url("/fonts/TWKLausanne-350.woff") format("woff");
-  font-weight: 350;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
   /* Font Families */
-  --font-sans: "DM Sans", sans-serif;
-  --font-serif: "TWKLausanne", serif;
+  --font-sans: var(--font-hanken-grotesk), sans-serif;
+  --font-serif: var(--font-hanken-grotesk), sans-serif;
 
   /* Primary colors */
   --color-primary-100: #047af0;
@@ -41,15 +30,19 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: var(--font-hanken-grotesk), sans-serif;
+}
+
 /* =====================
    Utility Font Classes
    ===================== */
 .font-dm-sans {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-hanken-grotesk), sans-serif;
 }
 
 .font-twk {
-  font-family: "TWKLausanne", sans-serif;
+  font-family: var(--font-hanken-grotesk), sans-serif;
 }
 
 .hide-scroll::-webkit-scrollbar {
@@ -57,4 +50,19 @@ html {
   scrollbar-width: 1px;
   scroll-behavior: smooth;
   scrollbar-color: black;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
 }

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import AboutUsSection from "@/components/AboutUsSection";
 import BookADemoSection from "@/components/BookADemoSection";
-import TeamSection from "@/components/TeamSection";
 import FaqSection from "@/components/landingPage/FaqSection";
 import Testimonials from "@/components/landingPage/Testimonials";
 import FeatureSection from "@/components/commons/FeatureSection";
+import MoreAboutUs from "@/components/commons/MoreAboutUs";
 
 const aboutTestimonials = [
   {
@@ -61,6 +61,8 @@ export default function Page() {
     <section className="pt-20 mx-auto">
       <AboutUsSection />
 
+      <MoreAboutUs />
+
       <FeatureSection
         badgeText="About Us"
         heading="Welcome to Unity Way Company Limited"
@@ -79,6 +81,14 @@ export default function Page() {
         title="What Our Clients Say"
         testimonials={aboutTestimonials}
       />
+
+      <BookADemoSection
+        title="Start a conversation about the domiciliary care you need"
+        description="Book care with a team that is ready to support comfort, dignity, and wellbeing at home."
+        buttonLabel="BOOK CARE"
+        buttonHref="/booking"
+      />
+
       <FaqSection
         badge="FAQ"
         title="Questions families often ask about domiciliary care"
@@ -86,12 +96,6 @@ export default function Page() {
         ctaLabel="Book Care"
         ctaHref="/booking"
         faqs={aboutFaqs}
-      />
-      <BookADemoSection
-        title="Start a conversation about the domiciliary care you need"
-        description="Book care with a team that is ready to support comfort, dignity, and wellbeing at home."
-        buttonLabel="BOOK CARE"
-        buttonHref="/booking"
       />
     </section>
   );

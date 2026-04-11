@@ -72,12 +72,12 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
         </div>
 
         {/* Image Section */}
-        <div className="flex-1 -z-0 relative w-full h-[350px] md:h-[450px] lg:h-[500px]">
+        <div className="flex-1 -z-0 relative w-full h-[350px] md:h-[450px] lg:h-[500px] rounded-2xl">
           <Image
             src={imageSrc}
             alt={imageAlt}
             fill
-            className="object-contain rounded-2xl"
+            className="object-cover rounded-xl"
           />
         </div>
       </div>
